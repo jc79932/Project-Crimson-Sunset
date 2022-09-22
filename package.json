@@ -1,0 +1,26 @@
+{
+  "name": "project-crimson-sunset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jc79932/Project-Crimson-Sunset.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jc79932/Project-Crimson-Sunset/issues"
+  },
+  "homepage": "https://github.com/jc79932/Project-Crimson-Sunset#readme",
+  "devDependencies": {
+    "babel-jest": "^29.0.3",
+    "jest": "^29.0.3"
+  }
+}
