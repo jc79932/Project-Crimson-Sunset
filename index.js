@@ -7,6 +7,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern'); 
 
+const generateFiles = require('./src/generateFiles');
 const errorMsg = 'Invalid response. Please try again.';
 const infoArray = [];
 
@@ -69,7 +70,7 @@ const addManager = () => {
     .then(managerInput => {
         const {name, id, email, officeNumber} = managerInput; 
         const manager = new Manager(name, id, email, officeNumber);
-        teamArray.push(manager); 
+        infoArray.push(manager); 
         
         console.log(manager); 
     })
@@ -181,3 +182,27 @@ const addEmployee = () => {
     })
 
 };
+
+//fs
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => { 
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("File dist/index.html successfully created")
+        }
+    })
+}; 
+
+addManager()
+  .then(addEmployee)
+  .then(infoArray => {
+    return generateFiles(infoArray);
+  })
+  .then(pageHTML => {
+    return writeFile(pageHTML);
+  })
+  .catch(err => {
+ console.log(err);
+  });

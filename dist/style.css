@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    background-color: crimson;
+    color: ghostwhite;
+    text-align: center;
+    height: 3em;
+    font-size: 1.5em;
+}
+
+nav > h1{
+    padding: 0.5em;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.flex-item{
+    flex: 25%;
+    margin: 24px 10px 0px;
+
+    background-color: gainsboro;
+}
+
+.title > h2, .title > p{
+    background-color: crimson;
+    padding-bottom: 4px;
+    color: ghostwhite;
+    margin-bottom: 0px;
+}
+
+.pad{
+    padding: 15px 0px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.083);
+}
+
+@media (max-width: 600px) {
+    .flex-item {
+      flex: 100%;
+    }
+  }
